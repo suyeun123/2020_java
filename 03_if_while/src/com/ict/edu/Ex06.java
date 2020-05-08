@@ -1,4 +1,4 @@
-package com.ict.edu;
++package com.ict.edu;
 
 public class Ex06 {
 	public static void main(String[] args) {
