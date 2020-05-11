@@ -29,31 +29,29 @@ public class Ex08 {
 		
 		// 구구단
 		
-//		int k2 = 2;
-//		while (k2<10) {
-//			System.out.println(k2 + "단");
-//			
-//		int g2 = 1 ;
-//		while (g2<10) {
-//			System.out.println(k2+"*"+ g2 +" = " + (k2*g2));
-//		}	
-//		g2++;
-//			
-//		}
-//		k2++;
-	
+		int k2 = 2;
+		while (k2<10) {
+			System.out.println(k2 + "단");
+			
+		int g2 = 1 ;
+		while (g2<10) {
+			System.out.println(k2 + "*" + g2 + " = " + (k2 * g2));
+		g2++;
+		}	
+		k2++;
+		}
 		
-		// 구구단
-				int k2 = 2 ;
-				while (k2<10) {
-					System.out.println(k2+"단");
-					int g2 = 1;
-					while (g2<10) {
-						System.out.println(k2 + "*" + g2 + " = " + (k2*g2));
-						g2++;
-					}
-					k2++;
-				}
+		// 구구단 선생님
+//				int k2 = 2 ;
+//				while (k2<10) {
+//					System.out.println(k2+"단");
+//					int g2 = 1;
+//					while (g2<10) {
+//						System.out.println(k2 + "*" + g2 + " = " + (k2*g2));
+//						g2++;
+//					}
+//					k2++;
+//				}
 		
 	}
 }
