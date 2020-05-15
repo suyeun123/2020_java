@@ -31,7 +31,7 @@ public class Ex07 {
 		System.out.println(su[1]);
 		
 
-		// 다차원 고정길이(가변) 배열의 출력
+		// 다차원 고정길이(가변) 배열의 출력 // 무조건 외우기
 		for (int i = 0; i < su.length; i++) {
 			for (int j = 0; j < su[i].length; j++) {
 				System.out.println(su[i][j]);
