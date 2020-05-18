@@ -20,6 +20,7 @@ public class Ex12_main {
 			
 			
 			System.out.print("이름 : ");
+			String name = sc.next();
 			// String name = sc.next();
 			// person.setName(sc.next()); //이름을 Ex09에 저장시켜놓기
 			

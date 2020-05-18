@@ -15,22 +15,12 @@ public class Ex12 {
 		this.name = name;
 		this.sum = sum;
 		this.avg = avg;
+		this.hak = hak;
 		this.rank = rank;
 	}
 	
 	
-	
-	// 합계구하기 
-	public int s_sum(int kor, int eng, int math) {
-		return kor + eng + math ;
-	}
-	
-	// 평균구하기 
-	public double s_avg() {
-		return (int)(sum/3.0*10) / 10.0 ;
-	}
-	
-	
+
 	// getter/setter
 	public String getName() {
 		return name;
