@@ -16,7 +16,7 @@ public class Ex01_sub extends Ex01_Sup {
 		String name = "홍두께";
 		System.out.println(name); // 홍두께
 	
-		
+		// 지역변수가 우선
 		// 지역X, 전역X, 부모O
 		System.out.println(addr);
 		System.out.println(this.addr);
