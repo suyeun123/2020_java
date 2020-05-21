@@ -9,8 +9,8 @@ class EX03 implements EX01{
 	public void play () {}
 	@Override
 	public void sound () {}
-	
-	// 2. 추상클래스가 상속 받으면 오버라딩 할 필요강벗다.
+}	
+	// 2. 추상클래스가 상속 받으면 오버라이딩 할 필요강벗다.
 	abstract class Ex04 implements EX01{
 		
 	int k1 = 10; 	// 인스턴스 변수
@@ -18,12 +18,17 @@ class EX03 implements EX01{
 	public abstract void leftsound();
 	}
 	
-
+	
+	abstract class Ex05 implements EX01{
+		int k1 = 10; // 인스턴스 변수
+	}
+	
+	
 	
 	// 3.인터페이스가 상속을 받으면 오버라이딩 할 필요가 없다.
 	
-	abstract class Ex06 implements EX01{
-		int k1 = 10 ; //인스턴스 변수
+	interface Ex06 extends EX01{
+		int k1 = 10 ; // static final
 		
 	}
 	
@@ -42,7 +47,8 @@ class EX03 implements EX01{
 		public void play() {}
 		@Override
 		public void sound() {}
-
-		public void leftSound() {}
+		
+		@Override
+		public void leftsound() {}
 		
 	}
