@@ -1,64 +1,67 @@
 package com.ict.edu;
 
-
-
 import java.util.HashSet;
 import java.util.Scanner;
 
-
 public class Ex04_Main {
-
-		
-	public static void main(String[] args) {
-		
-	Scanner sc = new Scanner(System.in);
-	
-	Ex04[] arr = new Ex04[4];
-	
-	
-	
-	HashSet<Ex03> set1 = new HashSet<Ex03>();
-	
-	
-	
-	for (String k : args) {
-		Ex04 person = new Ex04();
-		System.out.print("이름좀..>");
-		person.setName(sc.next());
-		System.out.println("국어점수 :");
-		int kor = sc.nextInt();
-		System.out.println("영어점수 :");
-		int eng = sc.nextInt();
-		System.out.println("수학점수 : ");
-		int math = sc.nextInt();
-		//총점
-		int sum = person.getSum();
-		person.setSum(sum);
-		//평균
-		double evg = person.getAvg();
-		person.setAvg(avg);
-		//학점
-		String hak = person.hak();
-		person.getHak();
+			public static void main(String[] args) {
 				
-		
-		
-	}
-	
-	
-		for (int i = 0; i < args.length; i++) {
-			for (int j = 0; j < args.length; j++) {
-				if (args[i].setSum() < args[j].getRank()+1);
+				Scanner sc = new Scanner(System.in);
+				
+				HashSet<Ex04> person = new HashSet<Ex04>();
+				
+				
+				while(true) {
+					
+					Ex04 p = new Ex04();
+					
+					System.out.print("이름");
+					String name = sc.next();
+					
+					System.out.print("국어");
+					int kor = sc.nextInt();
+					
+					System.out.print("영어");
+					int eng = sc.nextInt();
+					
+					System.out.print("수학");
+					int math = sc.nextInt();
+					
+					p.getName();
+					p.s_sum(kor, eng, math);
+					
+					person.add(p);
+					
+					System.out.print("계속할까요?<y/n>");
+					String str = sc.next();
+					
+					if(str.equalsIgnoreCase("n")) break;
+					
+					
+					
 				}
-		}
-		
-		for (int i = 0; i < args.length; i++) {
-	
-			
-		}
-		
-		
-	
-	}	
-	
+				
+				for (Ex04 k : person) {
+					for (Ex04 j : person) {
+						if(k.getSum() < j.getSum()) {
+							k.setRank(k.getRank());
+					}
+				}
+				
+				}
+				
+				
+				
+				
+				for (Ex04 k : person) {
+					System.out.print(k.getName()+ "");
+					System.out.print(k.getSum()+ "");
+					System.out.print(k.getHak()+ "");
+					System.out.print(k.getAvg()+ "");
+					System.out.println(k.getRank());
+				}
+				
+				
+			}
+
 }
