@@ -1,19 +1,21 @@
-package com.ict.edu6;
+package com.ict.edu7;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
-// ObjectOutputStream : 객체 출력 스트림, 바이트 스트림
-// writeObject() => 직렬화 메소드
-// 쓴다. => Output, VO
+
+
 public class Output {
+
 			public static void main(String[] args) {
 				
+				
+				
 				String pathname
-				="C:"+ File.separator + "Study" + File.separator+"util" + File.separator+"iO09.txt";  
+				="C:"+ File.separator + "Study" + File.separator+"util" + File.separator+"iO10.txt";  
 				File file = new File(pathname);
 				
 				
@@ -30,12 +32,23 @@ public class Output {
 					oos = new ObjectOutputStream(bos);
 					
 					
-					// 하나의 객체 정보를 담아보자
-					VO vo = new VO("고길동",34,70.4,true);
+					// 여러개의 객체 정보를 담아보자
+					VO vo1 = new VO("펭수",6,70.4,true);
+					VO vo2 = new VO("펭도",9,4.4,false);
+					VO vo3 = new VO("펭도리",2,72.4,true);
+					VO vo4 = new VO("펭수리",12,78.4,false);
+					VO vo5 = new VO("펭도라이",112,79.4,true);
+					
+					ArrayList<VO> list = new ArrayList<VO>();
+					list.add(vo1);
+					list.add(vo2);
+					list.add(vo3);
+					list.add(vo4);
+					list.add(vo5);
 					
 					
 					// 객체 직렬화
-					oos.writeObject(vo);
+					oos.writeObject(list);
 					oos.flush();
 					
 					
