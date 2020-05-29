@@ -4,6 +4,9 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+import java.util.ArrayList;
+
+import com.ict.edu8.VO;
 
 public class Input {
 			public static void main(String[] args) {
@@ -26,15 +29,14 @@ public class Input {
 					bos = new BufferedInputStream(fis);
 					oos = new ObjectInputStream(bos);
 					
+					ArrayList<VO> list = (ArrayList<VO>) oos.readObject();
 					
-					VO vo = (VO) oos.readObject();
-					
-					System.out.println(vo.getName());
-					System.out.println(vo.getAge());
-					System.out.println(vo.getWeight());
-					System.out.println(vo.isGender());
-					
-					
+					for (VO k : list) {
+						System.out.print(k.getName() + "");
+						System.out.print(k.getSum() + "");
+						System.out.print(k.getAvg()+ "");
+						System.out.println(k.getHak());
+					}
 					
 				} catch (Exception e) {
 					// TODO: handle exception
@@ -51,18 +53,5 @@ public class Input {
 					}
 				}
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
 			}
-		
 }

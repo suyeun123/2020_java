@@ -5,6 +5,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.ict.edu8.VO;
 
 public class Output {
 
@@ -21,6 +24,7 @@ public class Output {
 		ObjectOutputStream oos = null;
 		
 		
+		Scanner sc = new Scanner(System.in);
 		
 		
 		try {
@@ -29,26 +33,31 @@ public class Output {
 			bos = new BufferedOutputStream(fis);
 			oos = new ObjectOutputStream(bos);
 			
-//			VO vo = new VO(", , ,");
-			
-			
 			ArrayList<VO> list = new ArrayList<VO>();
 			
-			for (int i = 0; i < 5; i++) {
+			while(true) {
+				System.out.print("이름 : ");
+				String name = sc.next();
 				
-				System.out.println();
+				System.out.print("국어 : ");
+				int kor = sc.nextInt();
 				
+				System.out.print("영어 : ");
+				int eng = sc.nextInt();
+				
+				System.out.print("수학 : ");
+				int math = sc.nextInt();
+				
+				VO vo = new VO(name, kor, eng, math);
+				list.add(vo);
+				
+				System.out.print("계속할껴?(y/n)");
+				String msg = sc.next();
+				if(msg.equalsIgnoreCase("n"))break;
 				
 			}
-			
-			oos.writeObject(vo);
+			oos.writeObject(list);
 			oos.flush();
-			
-			
-	
-			
-			
-			
 			
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -63,21 +72,6 @@ public class Output {
 				// TODO: handle exception
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
-	
-	
-	
 	
 }
